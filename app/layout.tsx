@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Sarala } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/navbar";
+import fonts from "./fonts";
 
-const sarala = Sarala({ subsets: ["latin"], weight: ['400'] });
+
 
 export const metadata: Metadata = {
   title: "Bolsonext",
-  description: "Compra bolsones a precio record!",
+  description: "Compra bolsones a precio record",
   keywords: "bolson, bolsones, tienda, online, baratos, bolsonext"
 };
 
@@ -18,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sarala.className}>
-        <Navbar></Navbar>
-        {children}
+      <body className={fonts.sarala.className}>
+        <Navbar />
+        <div className={"pt-12"}>
+          {children}
+        </div>
       </body>
-    </html>
+    </html >
   );
 }

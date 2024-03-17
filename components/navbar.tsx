@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className={("bg-orange-600 fixed w-screen text-white text-lg p-3")}>
-      <ul className="flex flex-row justify-between sm:px-20">
+    <nav className={("bg-lime-950 fixed w-screen text-white p-3")}>
+      <ul className="flex flex-row justify-between sm:px-10" >
         <li>
           <LeftNavElements />
         </li>
@@ -14,23 +14,22 @@ export default function Navbar() {
         <li>
           <RightNavElements />
         </li>
-      </ul>
-    </nav>
+      </ul >
+    </nav >
   )
 }
 
 function LeftNavElements() {
   return (
-    <section>
-      <Link href="/" className="flex items
-      justify-center flex-row font-bold text-xl">
-        <Image src="/bolsonext-icon.svg"
-          className=""
-          alt="Bolsonext Icon"
-          width={24}
-          height={24} />
-        olsonext
+    <section className="flex gap-5 items-end">
+      <Link href="/" className="flex items-end">
+        <Image src="/logo-text.svg"
+          className="inline"
+          alt="Bolsonext"
+          width={484 * (24 / 128)}
+          height={128 * (24 / 128)} />
       </Link>
+      <Link href="/">Inicio</Link>
     </section>
   )
 }
@@ -38,14 +37,14 @@ function LeftNavElements() {
 function MidNavElements() {
   return (
     <section>
-      <Link href="/productos">Productos</Link>
     </section>
   )
 }
 
 function RightNavElements() {
   return (
-    <section>
+    <section className="flex gap-5">
+      <Link href="/productos">Productos</Link>
       <Link href="/about">Acerca de</Link>
     </section>
   )
