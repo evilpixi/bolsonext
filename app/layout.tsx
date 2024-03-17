@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sarala } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const sarala = Sarala({ subsets: ["latin"], weight: ['400'] });
 
 export const metadata: Metadata = {
   title: "Bolsonext",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={sarala.className}>
         <Navbar></Navbar>
         {children}
       </body>

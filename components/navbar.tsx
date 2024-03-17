@@ -1,19 +1,52 @@
 import Link from "next/link"
+import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className={("text-teal-500 bg-black p-3")}>
-      <ul className="flex flex-row gap-10">
+    <nav className={("bg-orange-600 fixed w-screen text-white text-lg p-3")}>
+      <ul className="flex flex-row justify-between sm:px-20">
         <li>
-          <Link href="/">Bolsonext</Link>
+          <LeftNavElements />
         </li>
         <li>
-          <Link href="/productos">Productos</Link>
+          <MidNavElements />
         </li>
         <li>
-          <Link href="/about">Acerca de</Link>
+          <RightNavElements />
         </li>
       </ul>
     </nav>
+  )
+}
+
+function LeftNavElements() {
+  return (
+    <section>
+      <Link href="/" className="flex items
+      justify-center flex-row font-bold text-xl">
+        <Image src="/bolsonext-icon.svg"
+          className=""
+          alt="Bolsonext Icon"
+          width={24}
+          height={24} />
+        olsonext
+      </Link>
+    </section>
+  )
+}
+
+function MidNavElements() {
+  return (
+    <section>
+      <Link href="/productos">Productos</Link>
+    </section>
+  )
+}
+
+function RightNavElements() {
+  return (
+    <section>
+      <Link href="/about">Acerca de</Link>
+    </section>
   )
 }
